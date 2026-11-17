@@ -11,7 +11,8 @@ def create(db, data):
     return r
 def deliver(db, report):
     j=db.get(Job,report.job_id)
-    if not j or not j.approved: return
+    # 只有已完成且获批准的整批结论才进入分发；半成品不产出文件。
+    if not j or j.status!='completed' or not j.approved: return
     out=io.StringIO()
     out.write('\ufeff')
     table=j.result.get('table',{})

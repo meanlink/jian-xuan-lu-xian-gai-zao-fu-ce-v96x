@@ -6,8 +6,8 @@ import {route} from './router/index.js';
 import {login} from './pages/login.js';
 import {overview} from './pages/overview.js';
 import {dataPage,bindData} from './pages/datasets.js';
-import {workbench,bindWorkbench} from './pages/workbench.js';
-import {results,bindResults} from './pages/results.js';
+import {workbench,bindWorkbench,stopWorkbenchPolling} from './pages/workbench.js';
+import {results,bindResults,stopResultsPolling} from './pages/results.js';
 import {reportPage,bindReports} from './pages/reports.js';
 import {esc} from './utils/dom.js';
 async function render(){

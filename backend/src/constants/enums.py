@@ -6,5 +6,10 @@ class Role(str, Enum):
 class JobStatus(str, Enum):
     queued = 'queued'
     running = 'running'
+    paused = 'paused'
     completed = 'completed'
     failed = 'failed'
+class SegmentStatus(str, Enum):
+    pending = 'pending'
+    running = 'running'
+    completed = 'completed'
